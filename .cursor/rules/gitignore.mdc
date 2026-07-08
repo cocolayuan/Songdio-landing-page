@@ -1,0 +1,10 @@
+---
+description: Git ignore preferences for this project
+alwaysApply: true
+---
+
+# Git Ignore Preferences
+
+- Always keep `node_modules` in `.gitignore`; never commit it.
+- When creating or scaffolding the project, ensure `.gitignore` exists and includes `node_modules` before the first commit.
+- If `.gitignore` is missing, create it and add `node_modules` as the minimum required entry.

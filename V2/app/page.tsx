@@ -1,5 +1,5 @@
-import AlbumCarousel from "@/components/AlbumCarousel";
+import LandingPage from "@/components/LandingPage";
 
 export default function Home() {
-  return <AlbumCarousel />;
+  return <LandingPage />;
 }

@@ -350,7 +350,7 @@ function Frame7() {
 
 function SoWhatAreWeBuilding() {
   return (
-    <div className="-translate-x-1/2 absolute bg-[#f5f5f5] h-[500px] left-1/2 overflow-clip rounded-[60px] top-[800px] w-[600px]" data-name="So, what are we building?">
+    <div className="-translate-x-1/2 absolute bg-[#f5f5f5] h-[500px] left-[958px] overflow-clip rounded-[60px] top-[856px] w-[600px]" data-name="So, what are we building?">
       <div className="-translate-y-1/2 [word-break:break-word] absolute flex flex-col font-['Questrial:Regular',sans-serif] justify-center leading-[0] left-[calc(50%-200px)] not-italic text-[#0f0f0f] text-[56px] top-[203px] tracking-[5.6px] w-[401px]">
         <p className="leading-[60px]">So, what are we building?</p>
       </div>
@@ -361,8 +361,8 @@ function SoWhatAreWeBuilding() {
 
 export default function P() {
   return (
-    <div className="relative size-full" data-name="P2">
-      <div className="absolute h-[1849px] left-0 top-0 w-[1920px]" data-name="BG">
+    <div className="relative size-full bg-[#121111]" data-name="P2">
+      <div className="absolute h-[1849px] left-[-15px] top-[123px] w-[1920px]" data-name="BG">
         <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgBg} />
       </div>
       <LovedByCreatorsEverywhere />

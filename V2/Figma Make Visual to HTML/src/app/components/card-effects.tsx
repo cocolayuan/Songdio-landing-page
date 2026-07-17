@@ -13,7 +13,7 @@ import imgWaveformBg from "../../imports/image-3.png";
  *     the play button are rendered in a separate layer ABOVE the blur so
  *     they remain sharp.
  *
- * Miyuki card (Frame76, left=1172 top=1526 w=278 h=168):
+ * Miyuki card (Frame76 replacement, left=1172 top=1669 w=278 h=168):
  *   - Covered with image-1.png as the card background fill.
  *   - Rounded-[24px] to match the design spec.
  *   - Card contents (avatar, label, Recording pill, waveform strip)
@@ -24,7 +24,7 @@ export function CardEffects() {
     <>
       {/* ── Miyuki card ──────────────────────────────────────────────── */}
       <div
-        className="absolute left-[1172px] top-[1526px] w-[278px] h-[168px] rounded-[24px] overflow-hidden pointer-events-none"
+        className="absolute left-[1194px] top-[1669px] w-[278px] h-[168px] rounded-[24px] overflow-hidden pointer-events-none"
         style={{ zIndex: 1 }}
       >
         {/* background bitmap */}

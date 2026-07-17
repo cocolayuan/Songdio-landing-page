@@ -1,6 +1,10 @@
 import svgPaths from "./svg-nst6z7x79i";
 import AlbumCarousel from "../../app/components/album-carousel";
 import { ComposerPanel } from "../../app/components/composer-settings";
+import { TextToMvPlayer } from "../../app/components/text-to-mv-player";
+import { MusicToMvPlayer } from "../../app/components/music-to-mv-player";
+import { TextToMusicPlayer } from "../../app/components/text-to-music-player";
+import { ImageToMusicPlayer } from "../../app/components/image-to-music-player";
 import imgImage568 from "./ef2c5c1194283c05595e341b34e920c62e8bac2e.png";
 import imgImage569 from "./20310161dffbb24bd447d6f41a8b262d3545eb0d.png";
 import imgImage576 from "./eef35be7110852ab48ab791a0df855a8b5eb488f.png";
@@ -27,6 +31,11 @@ import imgImage581 from "./2012f7d47cff5b1b88907ab1da1467651199d173.png";
 import imgImage582 from "./342bd0e889ce68ba79964f62fe47256a53cf26ce.png";
 import { imgFrame37 } from "./svg-z4k2a";
 
+const FEATURE_CARD_CLASS = "bg-[#202020] content-stretch flex flex-col h-[311px] w-[332px] items-start p-[28px] relative rounded-[24px] shrink-0";
+const FEATURE_COPY_CLASS = "[word-break:break-word] content-stretch flex flex-col font-['Questrial:Regular',sans-serif] gap-[12px] items-start not-italic relative shrink-0 w-full max-w-full text-left";
+const FEATURE_TITLE_CLASS = "leading-[normal] relative shrink-0 text-[20px] text-white w-full max-w-full text-left";
+const FEATURE_BODY_CLASS = "leading-[19px] relative shrink-0 text-[#9e9d9f] text-[14px] w-full max-w-full text-left";
+
 function Frame25() {
   return (
     <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col items-start leading-[0] left-[calc(50%-9px)] text-white top-[109px]">
@@ -42,16 +51,16 @@ function Frame25() {
 
 function Frame23() {
   return (
-    <div className="[word-break:break-word] content-stretch flex flex-col font-['Questrial:Regular',sans-serif] gap-[12px] items-start not-italic relative shrink-0">
-      <p className="leading-[normal] relative shrink-0 text-[20px] text-white w-[254px]">Text-to-Music</p>
-      <p className="leading-[19px] relative shrink-0 text-[#9e9d9f] text-[14px] w-[254px]">Describe a feeling, a scene, a memory — Songdio turns your words into a fully produced track.</p>
+    <div className={FEATURE_COPY_CLASS}>
+      <p className={FEATURE_TITLE_CLASS}>Text-to-Music</p>
+      <p className={FEATURE_BODY_CLASS}>Describe a feeling, a scene, a memory — Songdio turns your words into a fully produced track.</p>
     </div>
   );
 }
 
 function Frame22() {
   return (
-    <div className="bg-[#202020] content-stretch flex flex-col h-[300px] items-start p-[28px] relative rounded-[24px] shrink-0">
+    <div className={FEATURE_CARD_CLASS}>
       <Frame23 />
     </div>
   );
@@ -59,9 +68,9 @@ function Frame22() {
 
 function Frame26() {
   return (
-    <div className="[word-break:break-word] content-stretch flex flex-col font-['Questrial:Regular',sans-serif] gap-[12px] items-start not-italic relative shrink-0">
-      <p className="leading-[normal] relative shrink-0 text-[20px] text-white w-[254px]">Image-to-Music</p>
-      <div className="leading-[0] relative shrink-0 text-[#9e9d9f] text-[14px] w-[254px] whitespace-pre-wrap">
+    <div className={FEATURE_COPY_CLASS}>
+      <p className={FEATURE_TITLE_CLASS}>Image-to-Music</p>
+      <div className="leading-[0] relative shrink-0 text-[#9e9d9f] text-[14px] w-full max-w-full whitespace-pre-wrap">
         <p className="leading-[19px] mb-0">{`Every photo has a soundtrack hiding in it. `}</p>
         <p className="leading-[19px]">Upload one and let AI find it.</p>
       </div>
@@ -71,7 +80,7 @@ function Frame26() {
 
 function Frame24() {
   return (
-    <div className="bg-[#202020] content-stretch flex flex-col h-[300px] items-start p-[28px] relative rounded-[24px] shrink-0">
+    <div className={FEATURE_CARD_CLASS}>
       <Frame26 />
     </div>
   );
@@ -79,16 +88,16 @@ function Frame24() {
 
 function Frame28() {
   return (
-    <div className="[word-break:break-word] content-stretch flex flex-col font-['Questrial:Regular',sans-serif] gap-[12px] items-start not-italic relative shrink-0">
-      <p className="leading-[normal] relative shrink-0 text-[20px] text-white w-[254px]">Hum-to-Music</p>
-      <p className="leading-[19px] relative shrink-0 text-[#9e9d9f] text-[14px] w-[254px]">That melody stuck in your head? Hum eight bars — Songdio finishes the song.</p>
+    <div className={FEATURE_COPY_CLASS}>
+      <p className={FEATURE_TITLE_CLASS}>Hum-to-Music</p>
+      <p className={FEATURE_BODY_CLASS}>That melody stuck in your head? Hum eight bars — Songdio finishes the song.</p>
     </div>
   );
 }
 
 function Frame27() {
   return (
-    <div className="bg-[#202020] content-stretch flex flex-col h-[300px] items-start p-[28px] relative rounded-[24px] shrink-0">
+    <div className={FEATURE_CARD_CLASS}>
       <Frame28 />
     </div>
   );
@@ -96,9 +105,9 @@ function Frame27() {
 
 function Frame30() {
   return (
-    <div className="[word-break:break-word] content-stretch flex flex-col font-['Questrial:Regular',sans-serif] gap-[12px] items-start not-italic relative shrink-0">
-      <p className="leading-[normal] relative shrink-0 text-[20px] text-white w-[254px]">Music-to-MV</p>
-      <div className="leading-[0] relative shrink-0 text-[#9e9d9f] text-[14px] w-[254px] whitespace-pre-wrap">
+    <div className={FEATURE_COPY_CLASS}>
+      <p className={FEATURE_TITLE_CLASS}>Music-to-MV</p>
+      <div className="leading-[0] relative shrink-0 text-[#9e9d9f] text-[14px] w-full max-w-full whitespace-pre-wrap">
         <p className="leading-[19px] mb-0">{`Your track deserves visuals. Auto-generate a music video synced `}</p>
         <p className="leading-[19px]">beat-for-beat.</p>
       </div>
@@ -108,7 +117,7 @@ function Frame30() {
 
 function Frame29() {
   return (
-    <div className="bg-[#202020] content-stretch flex flex-col h-[300px] items-start p-[28px] relative rounded-[24px] shrink-0">
+    <div className={FEATURE_CARD_CLASS}>
       <Frame30 />
     </div>
   );
@@ -116,16 +125,16 @@ function Frame29() {
 
 function Frame32() {
   return (
-    <div className="[word-break:break-word] content-stretch flex flex-col font-['Questrial:Regular',sans-serif] gap-[12px] items-start not-italic relative shrink-0">
-      <p className="leading-[normal] relative shrink-0 text-[20px] text-white w-[254px]">Text-to-MV</p>
-      <p className="leading-[19px] relative shrink-0 text-[#9e9d9f] text-[14px] w-[254px]">One idea, two outputs — describe a concept and get a fully realized music video, no editing required.</p>
+    <div className={FEATURE_COPY_CLASS}>
+      <p className={FEATURE_TITLE_CLASS}>Text-to-MV</p>
+      <p className={FEATURE_BODY_CLASS}>One idea, two outputs — describe a concept and get a fully realized music video, no editing required.</p>
     </div>
   );
 }
 
 function Frame31() {
   return (
-    <div className="bg-[#202020] content-stretch flex flex-col h-[300px] items-start p-[28px] relative rounded-[24px] shrink-0">
+    <div className={FEATURE_CARD_CLASS}>
       <Frame32 />
     </div>
   );
@@ -133,16 +142,16 @@ function Frame31() {
 
 function Frame34() {
   return (
-    <div className="[word-break:break-word] content-stretch flex flex-col font-['Questrial:Regular',sans-serif] gap-[12px] items-start not-italic relative shrink-0 w-[254px]">
-      <p className="leading-[normal] relative shrink-0 text-[20px] text-white whitespace-nowrap">Cover Songs with Your Voice</p>
-      <p className="leading-[19px] relative shrink-0 text-[#9e9d9f] text-[14px] w-[254px]">Your voice, your favorite songs. Create personalized covers in seconds.</p>
+    <div className={FEATURE_COPY_CLASS}>
+      <p className={FEATURE_TITLE_CLASS}>Cover Songs with Your Voice</p>
+      <p className={FEATURE_BODY_CLASS}>Your voice, your favorite songs. Create personalized covers in seconds.</p>
     </div>
   );
 }
 
 function Frame33() {
   return (
-    <div className="bg-[#202020] content-stretch flex flex-col h-[300px] items-start p-[28px] relative rounded-[24px] shrink-0">
+    <div className={FEATURE_CARD_CLASS}>
       <Frame34 />
     </div>
   );
@@ -150,16 +159,16 @@ function Frame33() {
 
 function Frame36() {
   return (
-    <div className="[word-break:break-word] content-stretch flex flex-col font-['Questrial:Regular',sans-serif] gap-[12px] items-start not-italic relative shrink-0">
-      <p className="leading-[normal] relative shrink-0 text-[20px] text-white w-[254px]">AI Singer Cover</p>
-      <p className="leading-[19px] relative shrink-0 text-[#9e9d9f] text-[14px] w-[254px]">Pick a voice, any voice — Songdio sings your track for you.</p>
+    <div className={FEATURE_COPY_CLASS}>
+      <p className={FEATURE_TITLE_CLASS}>AI Singer Cover</p>
+      <p className={FEATURE_BODY_CLASS}>Pick a voice, any voice — Songdio sings your track for you.</p>
     </div>
   );
 }
 
 function Frame35() {
   return (
-    <div className="bg-[#202020] content-stretch flex flex-col h-[300px] items-start p-[28px] relative rounded-[24px] shrink-0">
+    <div className={FEATURE_CARD_CLASS}>
       <Frame36 />
     </div>
   );
@@ -167,16 +176,16 @@ function Frame35() {
 
 function Frame38() {
   return (
-    <div className="[word-break:break-word] content-stretch flex flex-col font-['Questrial:Regular',sans-serif] gap-[12px] items-start not-italic relative shrink-0">
-      <p className="leading-[normal] relative shrink-0 text-[20px] text-white w-[254px]">AI Music Exploration</p>
-      <p className="leading-[19px] relative shrink-0 text-[#9e9d9f] text-[14px] w-[254px]">Endless tracks, zero repeats — dive into a library made entirely by AI.</p>
+    <div className={FEATURE_COPY_CLASS}>
+      <p className={FEATURE_TITLE_CLASS}>AI Music Exploration</p>
+      <p className={FEATURE_BODY_CLASS}>Endless tracks, zero repeats — dive into a library made entirely by AI.</p>
     </div>
   );
 }
 
 function Frame37() {
   return (
-    <div className="bg-[#202020] content-stretch flex flex-col h-[300px] items-start p-[28px] relative rounded-[24px] shrink-0">
+    <div className={FEATURE_CARD_CLASS}>
       <Frame38 />
     </div>
   );
@@ -184,16 +193,16 @@ function Frame37() {
 
 function Frame40() {
   return (
-    <div className="[word-break:break-word] content-stretch flex flex-col font-['Questrial:Regular',sans-serif] gap-[12px] items-start not-italic relative shrink-0">
-      <p className="leading-[normal] relative shrink-0 text-[20px] text-white w-[254px]">Audio Separation</p>
-      <p className="leading-[19px] relative shrink-0 text-[#9e9d9f] text-[14px] w-[254px] whitespace-pre-wrap">{`Split any track into vocals, drums and other  instrumentals — 2, 4, or 12 stems, studio-grade precision.`}</p>
+    <div className={FEATURE_COPY_CLASS}>
+      <p className={FEATURE_TITLE_CLASS}>Audio Separation</p>
+      <p className={`${FEATURE_BODY_CLASS} whitespace-pre-wrap`}>{`Split any track into vocals, drums and other  instrumentals — 2, 4, or 12 stems, studio-grade precision.`}</p>
     </div>
   );
 }
 
 function Frame39() {
   return (
-    <div className="bg-[#202020] content-stretch flex flex-col h-[300px] items-start p-[28px] relative rounded-[24px] shrink-0">
+    <div className={FEATURE_CARD_CLASS}>
       <Frame40 />
     </div>
   );
@@ -201,7 +210,7 @@ function Frame39() {
 
 function Text() {
   return (
-    <div className="-translate-x-1/2 absolute gap-x-[40px] gap-y-[40px] grid-cols-[repeat(3,fit-content(100%))] grid-rows-[repeat(3,fit-content(100%))] inline-grid left-[calc(50%+1px)] top-[275px]" data-name="TEXT">
+    <div className="-translate-x-1/2 absolute gap-x-[40px] gap-y-[40px] grid-cols-[repeat(3,332px)] grid-rows-[repeat(3,fit-content(100%))] inline-grid left-[calc(50%+1px)] top-[275px]" data-name="TEXT">
       <div className="content-stretch flex items-center justify-self-start relative self-start shrink-0" data-name="Nine ways">
         <Frame22 />
       </div>
@@ -264,7 +273,7 @@ function Frame42() {
 
 function Frame41() {
   return (
-    <div className="absolute content-stretch flex gap-[4px] items-center left-[499px] px-[20px] py-[8px] rounded-[20px] top-[490px] w-[223px]">
+    <div className="absolute content-stretch flex gap-[4px] items-center left-[477px] px-[20px] py-[8px] rounded-[20px] top-[490px] w-[223px]">
       <div className="h-[23px] relative shrink-0 w-[149.993px]" data-name="Union">
         <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 149.993 23">
           <g id="Union">
@@ -355,7 +364,7 @@ function Frame41() {
 
 function Frame43() {
   return (
-    <div className="absolute bg-[#101010] content-stretch flex h-[65px] items-center left-[491px] px-[16px] py-[10px] rounded-[24px] top-[416px] w-[239px]">
+    <div className="absolute bg-[#101010] content-stretch flex h-[65px] items-center left-[469px] px-[16px] py-[10px] rounded-[24px] top-[416px] w-[239px]">
       <p className="[word-break:break-word] bg-clip-text font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[12px] text-[transparent] w-[169px]" style={{ backgroundImage: "url(\"data:image/svg+xml;utf8,<svg viewBox='0 0 169 30' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(3.3395e-15 3 -14.389 3.8937e-15 86.386 -2.6645e-14)'><stop stop-color='rgba(255,255,255,0.8)' offset='0'/><stop stop-color='rgba(255,255,255,0)' offset='1'/></radialGradient></defs></svg>\"), linear-gradient(180deg, rgb(119, 255, 217) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(24.3528deg, rgb(172, 228, 146) 0.77959%, rgba(255, 255, 255, 0) 100%), url(\"data:image/svg+xml;utf8,<svg viewBox='0 0 169 30' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(-9.6092 -3.0532 6.8027 -1.7391 96.092 30)'><stop stop-color='rgba(255,252,177,1)' offset='0.03273'/><stop stop-color='rgba(255,255,255,0)' offset='1'/></radialGradient></defs></svg>\"), linear-gradient(-24.21deg, rgb(128, 211, 255) 75.601%, rgba(255, 255, 255, 0) 100.5%), linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%)" }}>
         A quiet night drivethrough the city, rainon the window.
       </p>
@@ -365,7 +374,7 @@ function Frame43() {
 
 function Frame() {
   return (
-    <div className="absolute left-[687px] size-[23.832px] top-[439px]" data-name="Frame">
+    <div className="absolute left-[665px] size-[23.832px] top-[439px]" data-name="Frame">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 23.832 23.832">
         <g id="Frame">
           <g id="Union">
@@ -478,7 +487,7 @@ function PlayButton2() {
 
 function Frame47() {
   return (
-    <div className="absolute left-[939px] rounded-[23.294px] size-[44px] top-[801px]">
+    <div className="absolute left-[939px] rounded-[23.294px] size-[44px] top-[812px]">
       <PlayButton2 />
     </div>
   );
@@ -564,7 +573,7 @@ function Frame50() {
 
 function Frame48() {
   return (
-    <div className="absolute bg-[#222] content-stretch flex items-center justify-between left-[1184px] pl-[12px] pr-[4px] rounded-[12px] top-[1087px] w-[254px]">
+    <div className="absolute bg-[#222] content-stretch flex items-center justify-between left-[1206px] pl-[12px] pr-[4px] rounded-[12px] top-[1109px] w-[254px]">
       <Frame49 />
       <Frame50 />
     </div>
@@ -652,7 +661,7 @@ function Frame54() {
 
 function Frame52() {
   return (
-    <div className="absolute bg-[#434343] content-stretch flex items-center justify-between left-[1184px] pl-[12px] pr-[4px] rounded-[12px] top-[1126px] w-[254px]">
+    <div className="absolute bg-[#434343] content-stretch flex items-center justify-between left-[1206px] pl-[12px] pr-[4px] rounded-[12px] top-[1148px] w-[254px]">
       <Frame53 />
       <Frame54 />
     </div>
@@ -748,7 +757,7 @@ function Frame58() {
 
 function Frame56() {
   return (
-    <div className="absolute bg-[#3b3a3a] content-stretch flex items-center justify-between left-[1184px] pl-[12px] pr-[4px] rounded-[12px] top-[1204px] w-[254px]">
+    <div className="absolute bg-[#3b3a3a] content-stretch flex items-center justify-between left-[1206px] pl-[12px] pr-[4px] rounded-[12px] top-[1226px] w-[254px]">
       <Frame57 />
       <Frame58 />
     </div>
@@ -839,7 +848,7 @@ function Frame62() {
 
 function Frame60() {
   return (
-    <div className="absolute bg-[#222] content-stretch flex gap-[18px] items-center left-[1184px] px-[12px] rounded-[12px] top-[1165px] w-[254px]">
+    <div className="absolute bg-[#222] content-stretch flex gap-[18px] items-center left-[1206px] px-[12px] rounded-[12px] top-[1187px] w-[254px]">
       <Frame61 />
       <Frame62 />
     </div>
@@ -848,47 +857,46 @@ function Frame60() {
 
 function Component() {
   return (
-    <div className="absolute bg-[#121111] h-[1380px] overflow-clip right-0 top-[1135px] w-[1920px]" data-name="详细的功能">
+    <div className="absolute h-[1435px] left-[-4px] overflow-visible top-[1248px] w-[1920px]" style={{ background: "linear-gradient(180deg, #000 0%, #121111 20%)" }} data-name="详细的功能">
+      <div className="relative size-full" style={{ transform: "translateY(30px)" }}>
       <Frame25 />
       <Text />
-      <Frame41 />
-      <Frame43 />
-      <Frame />
-      <div className="absolute h-[133px] left-[827px] rounded-[24px] top-[391px] w-[236px]" data-name="image 568">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[24px] size-full" src={imgImage568} />
-      </div>
-      <Frame44 />
-      <div className="absolute bg-[#171717] h-[11px] left-[1192px] top-[510px] w-[2px]" />
-      <div className="absolute bg-[#171717] h-[11px] left-[1195px] top-[510px] w-[2px]" />
-      <div className="absolute h-[153px] left-[822px] rounded-[24px] shadow-[0px_4px_7px_1px_rgba(120,118,118,0.21)] top-[746px] w-[278px]" data-name="image 569">
+      <TextToMusicPlayer />
+      <ImageToMusicPlayer />
+      <div className="absolute h-[11px] left-[1214px] top-[510px] w-[2px]" style={{ background: "#171717" }} />
+      <div className="absolute bg-[#171717] h-[11px] left-[1217px] top-[510px] w-[2px]" />
+      <div className="absolute h-[153px] left-[822px] rounded-[24px] shadow-[0px_4px_7px_1px_rgba(120,118,118,0.21)] top-[757px] w-[278px]" data-name="image 569">
         <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[24px] size-full" src={imgImage569} />
       </div>
       <Frame47 />
-      <div className="absolute flex h-[153px] items-center justify-center left-[472px] top-[746px] w-[278px]">
+      <TextToMvPlayer />
+      <div className="absolute flex h-[153px] items-center justify-center left-[450px] top-[757px] w-[278px]">
         <div className="-scale-y-100 flex-none rotate-180">
           <div className="h-[153px] relative rounded-[24px] w-[278px]" data-name="image 576">
             <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[24px] size-full" src={imgImage576} />
           </div>
         </div>
       </div>
-      <div className="absolute h-[70px] left-[829px] rounded-[20px] top-[1078px] w-[126px]" data-name="image 577">
+      <MusicToMvPlayer />
+      <div className="absolute h-[70px] left-[829px] rounded-[20px] top-[1100px] w-[126px]" data-name="image 577">
         <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[20px]">
           <img alt="" className="absolute h-[104.69%] left-[-3.24%] max-w-none top-[-4.16%] w-[116.32%]" src={imgImage577} />
         </div>
       </div>
-      <div className="absolute h-[70px] left-[967px] rounded-[20px] top-[1078px] w-[126px]" data-name="image 578">
+      <div className="absolute h-[70px] left-[967px] rounded-[20px] top-[1100px] w-[126px]" data-name="image 578">
         <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[20px] size-full" src={imgImage578} />
       </div>
-      <div className="absolute h-[70px] left-[828px] rounded-[20px] top-[1160px] w-[126px]" data-name="image 579">
+      <div className="absolute h-[70px] left-[828px] rounded-[20px] top-[1182px] w-[126px]" data-name="image 579">
         <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[20px] size-full" src={imgImage579} />
       </div>
-      <div className="absolute h-[70px] left-[966px] rounded-[20px] top-[1160px] w-[126px]" data-name="image 580">
+      <div className="absolute h-[70px] left-[966px] rounded-[20px] top-[1182px] w-[126px]" data-name="image 580">
         <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[20px] size-full" src={imgImage580} />
       </div>
       <Frame48 />
       <Frame52 />
       <Frame56 />
       <Frame60 />
+      </div>
     </div>
   );
 }
@@ -1112,15 +1120,19 @@ function P() {
       <p
         className="-translate-x-1/2 [word-break:break-word] absolute leading-[normal] left-1/2 not-italic text-[36px] text-center top-[16px] tracking-[11.52px] whitespace-nowrap"
         style={{
+          textAlign: "center",
+          WebkitTextStrokeWidth: "0.5px",
+          WebkitTextStrokeColor: "#000",
           fontFamily: "Dotrice, sans-serif",
+          fontSize: "36px",
           fontWeight: 400,
           fontStyle: "normal",
-          backgroundImage: "linear-gradient(90deg, #000 -7.92%, #FFF 16.72%, #000 108.83%)",
+          lineHeight: "normal",
+          letterSpacing: "11.52px",
+          backgroundImage: "linear-gradient(90deg, #000 -7.92%, #FFF 16.72%, #000 calc(108.83% + 80px))",
           backgroundClip: "text",
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",
-          WebkitTextStrokeWidth: "0.5px",
-          WebkitTextStrokeColor: "#000",
         }}
       >Original AI tracks, made to match your vibe.</p>
       <Frame21 />
@@ -1851,7 +1863,7 @@ function Frame80() {
 
 function Frame76() {
   return (
-    <div className="absolute h-[168px] left-[1172px] rounded-[16px] top-[1526px] w-[278px]" style={{ backgroundImage: "url(\"data:image/svg+xml;utf8,<svg viewBox='0 0 278 168' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(5.4933e-15 16.8 -23.67 2.1805e-14 142.1 -1.4921e-13)'><stop stop-color='rgba(255,255,255,0.8)' offset='0'/><stop stop-color='rgba(255,255,255,0)' offset='1'/></radialGradient></defs></svg>\"), linear-gradient(180deg, rgb(128, 170, 64) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(86.5882deg, rgb(205, 207, 84) 5.9274%, rgba(255, 255, 255, 0) 69.387%), url(\"data:image/svg+xml;utf8,<svg viewBox='0 0 278 168' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(-15.807 -17.098 11.19 -9.7392 158.07 168)'><stop stop-color='rgba(255,250,114,1)' offset='0.03273'/><stop stop-color='rgba(255,253,185,0.5)' offset='0.51637'/><stop stop-color='rgba(255,255,255,0)' offset='1'/></radialGradient></defs></svg>\"), linear-gradient(-41.7159deg, rgb(122, 195, 231) 95.86%, rgba(255, 255, 255, 0) 120.3%), linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%)" }}>
+    <div className="absolute h-[168px] left-[1172px] rounded-[16px] top-[1669px] w-[278px]" style={{ backgroundImage: "url(\"data:image/svg+xml;utf8,<svg viewBox='0 0 278 168' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(5.4933e-15 16.8 -23.67 2.1805e-14 142.1 -1.4921e-13)'><stop stop-color='rgba(255,255,255,0.8)' offset='0'/><stop stop-color='rgba(255,255,255,0)' offset='1'/></radialGradient></defs></svg>\"), linear-gradient(180deg, rgb(128, 170, 64) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(86.5882deg, rgb(205, 207, 84) 5.9274%, rgba(255, 255, 255, 0) 69.387%), url(\"data:image/svg+xml;utf8,<svg viewBox='0 0 278 168' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(-15.807 -17.098 11.19 -9.7392 158.07 168)'><stop stop-color='rgba(255,250,114,1)' offset='0.03273'/><stop stop-color='rgba(255,253,185,0.5)' offset='0.51637'/><stop stop-color='rgba(255,255,255,0)' offset='1'/></radialGradient></defs></svg>\"), linear-gradient(-41.7159deg, rgb(122, 195, 231) 95.86%, rgba(255, 255, 255, 0) 120.3%), linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%)" }}>
       <p className="[word-break:break-word] absolute font-['Inter:Medium',sans-serif] font-medium leading-[1.526] left-[25px] not-italic text-[#171717] text-[12px] top-[73px] whitespace-nowrap">{`Miyuki `}</p>
       <Frame77 />
       <Frame78 />
@@ -1895,7 +1907,7 @@ function Frame81() {
 
 function Frame83() {
   return (
-    <div className="absolute bg-[#302f2f] h-[163px] left-[472px] rounded-[24px] top-[2211px] w-[278px]">
+    <div className="absolute bg-[#302f2f] h-[163px] left-[450px] rounded-[24px] top-[2376px] w-[278px]">
       <div className="absolute left-[22px] rounded-[60px] size-[80px] top-[4px]" data-name="image 574">
         <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[60px]">
           <img alt="" className="absolute h-[189.52%] left-[-15.4%] max-w-none top-[5.39%] w-[121.15%]" src={imgImage574} />
@@ -1948,7 +1960,7 @@ function PlayButton4() {
 
 function Frame84() {
   return (
-    <div className="absolute left-[589px] rounded-[23.294px] size-[44px] top-[1935px]">
+    <div className="absolute left-[567px] rounded-[23.294px] size-[44px] top-[2089px]">
       <PlayButton4 />
     </div>
   );
@@ -1959,7 +1971,6 @@ export default function HtmlFe() {
     <div className="bg-black relative size-full" data-name="HTML-FE">
       <Component />
       <P />
-      <Frame76 />
       <Frame83 />
       <Frame84 />
     </div>

@@ -101,7 +101,6 @@ export function ComposerPanel() {
     <div
       className="pointer-events-auto w-full max-w-[1069px] mx-auto"
       data-name="composer-panel"
-      style={{ fontSize: "max(10px, 1em)" }}
     >
       {/* Input row */}
       <div className="relative h-[74px] rounded-[24px] border border-white/8 bg-[#1C1C1F] flex items-center pl-[20px] pr-[12px] gap-[12px]">
@@ -110,7 +109,7 @@ export function ComposerPanel() {
           value={prompt}
           onChange={(e) => setPrompt(e.target.value)}
           placeholder="Describe your song..."
-          className="flex-1 min-w-0 bg-transparent outline-none border-0 text-[#eee] placeholder:text-[#66666d] text-[clamp(10px,1.2vw,19px)] leading-none"
+          className="flex-1 min-w-0 bg-transparent outline-none border-0 text-[#eee] placeholder:text-[#66666d] text-[16px] leading-none"
         />
         <button
           type="button"
@@ -127,7 +126,7 @@ export function ComposerPanel() {
           aria-label="Create song"
         >
           <MusicNoteIcon className="size-[22px]" />
-          <span className="font-['Questrial',sans-serif] font-bold text-[clamp(12px,1.15vw,19px)] whitespace-nowrap tracking-[0.02em]">
+          <span className="font-['Questrial',sans-serif] font-bold text-[16px] whitespace-nowrap tracking-[0.02em]">
             Create
           </span>
         </button>
@@ -178,7 +177,7 @@ export function ComposerPanel() {
                     strokeWidth="1.5"
                   />
                 </svg>
-                <span className="text-[#9a9aa0] text-[clamp(10px,1vw,16px)] leading-none">Instrumental</span>
+                <span className="text-[#9a9aa0] text-[14px] leading-none">Instrumental</span>
                 <button
                   type="button"
                   role="switch"
@@ -212,7 +211,7 @@ export function ComposerPanel() {
                   className="h-[46px] px-[18px] rounded-full border border-white/16 bg-black flex items-center gap-[10px] cursor-pointer"
                 >
                   <ModeBarsIcon />
-                  <span className="font-['Inter',sans-serif] font-bold text-white text-[clamp(10px,1vw,16px)] whitespace-nowrap">
+                  <span className="font-['Inter',sans-serif] font-bold text-white text-[14px] whitespace-nowrap">
                     {modeLabel}
                   </span>
                   <svg width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden>
@@ -258,7 +257,7 @@ export function ComposerPanel() {
                           className="w-full flex items-center justify-between gap-[10px] px-[16px] h-[46px] cursor-pointer hover:bg-white/[0.06]"
                         >
                           <span
-                            className="font-['Inter',sans-serif] font-bold text-[clamp(10px,1vw,16px)] whitespace-nowrap"
+                            className="font-['Inter',sans-serif] font-bold text-[14px] whitespace-nowrap"
                             style={{
                               color:
                                 modeChosen && selectedVersion === v.label ? "#fff" : "#9A9AA0",
@@ -293,7 +292,7 @@ export function ComposerPanel() {
                       key={tag}
                       type="button"
                       onClick={() => appendTag(tag)}
-                      className="shrink-0 h-[46px] px-[18px] rounded-full bg-[#1a1a1d] border border-white/8 text-[#9a9aa0] text-[clamp(10px,1vw,16px)] hover:bg-[#2a2a2d] hover:text-white transition-colors whitespace-nowrap"
+                      className="shrink-0 h-[46px] px-[18px] rounded-full bg-[#1a1a1d] border border-white/8 text-[#9a9aa0] text-[14px] hover:bg-[#2a2a2d] hover:text-white transition-colors whitespace-nowrap"
                     >
                       + {tag}
                     </button>

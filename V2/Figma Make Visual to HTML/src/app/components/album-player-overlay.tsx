@@ -19,7 +19,7 @@ export const ALBUM_TRACKS: AlbumTrack[] = [
     id: 2,
     cover: "/album-covers/02.png",
     audio: "/album-tracks/02.m4a",
-    keywords: ["Dream Pop", "Ambient"],
+    keywords: ["Dream Pop", "Ambient", "Ethereal", "Reverb"],
   },
   {
     id: 3,
@@ -31,13 +31,13 @@ export const ALBUM_TRACKS: AlbumTrack[] = [
     id: 4,
     cover: "/album-covers/04.png",
     audio: "/album-tracks/04.m4a",
-    keywords: ["Electronic", "Pulse"],
+    keywords: ["Electronic", "Pulse", "Happy"],
   },
   {
     id: 5,
     cover: "/album-covers/05.png",
     audio: "/album-tracks/05.m4a",
-    keywords: ["Jazz", "Night"],
+    keywords: ["Lofi", "Melancholy", "Ambient", "Breakup"],
   },
   {
     id: 6,

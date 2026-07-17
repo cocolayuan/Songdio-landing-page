@@ -51,8 +51,8 @@ export function CardCoverSongsOverlay() {
       <div
         className="absolute rounded-[54px] overflow-hidden pointer-events-auto"
         style={{
-          left: 1172,
-          top: 1909,
+          left: 1194,
+          top: 2051,
           width: 278,
           height: 102,
           transition: "transform 1.5s ease-in-out",

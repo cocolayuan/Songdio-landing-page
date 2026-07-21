@@ -12,17 +12,9 @@ Songdio 官网落地页项目，按版本分目录管理。
 
 - Preview: https://cocolayuan.github.io/Songdio-landing-page/
 
-由 GitHub Pages 自动部署 `main` 分支上的最新 V2 构建产物，他人无需启动本地服务即可查看。
+由 GitHub Pages（`gh-pages` 分支）托管最新 V2 构建产物，他人无需启动本地服务即可查看。
 
-### 本地开发
-
-```bash
-cd "V2/Figma Make Visual to HTML"
-npm install
-npm run dev
-```
-
-浏览器打开 [http://localhost:5173](http://localhost:5173)。
+本地开发：`cd "V2/Figma Make Visual to HTML" && npm install && npm run dev`（默认 [http://localhost:5173](http://localhost:5173)）。
 
 ## 目录结构
 

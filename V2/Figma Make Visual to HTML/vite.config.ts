@@ -17,6 +17,9 @@ function figmaAssetResolver() {
 }
 
 export default defineConfig({
+  // Relative base so the build works on GitHub Pages project URLs
+  // (e.g. /Songdio-landing-page/) as well as local `vite` / `vite preview`.
+  base: './',
   plugins: [
     figmaAssetResolver(),
     // The React and Tailwind plugins are both required for Make, even if

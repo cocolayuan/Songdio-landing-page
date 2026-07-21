@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { asset } from "../../lib/asset";
 
 type TrackId = "vocals" | "drums" | "guitar" | "bass";
 
@@ -15,28 +16,28 @@ type TrackDef = {
 const TRACKS: TrackDef[] = [
   {
     id: "vocals",
-    src: "/features/audio-separation/vocals.mp3",
+    src: asset("/features/audio-separation/vocals.mp3"),
     rowTop: 1109,
     cover: { x: 1308, y: 1109, w: 135, h: 31, bg: "#222222" },
     bars: { x: 1317, y: 1113, w: 118, h: 23 },
   },
   {
     id: "drums",
-    src: "/features/audio-separation/drums.mp3",
+    src: asset("/features/audio-separation/drums.mp3"),
     rowTop: 1148,
     cover: { x: 1323, y: 1148, w: 120, h: 31, bg: "#434343" },
     bars: { x: 1331, y: 1152, w: 96, h: 23 },
   },
   {
     id: "guitar",
-    src: "/features/audio-separation/guitar.mp3",
+    src: asset("/features/audio-separation/guitar.mp3"),
     rowTop: 1187,
     cover: { x: 1292, y: 1187, w: 140, h: 31, bg: "#222222" },
     bars: { x: 1300, y: 1191, w: 124, h: 23 },
   },
   {
     id: "bass",
-    src: "/features/audio-separation/bass.mp3",
+    src: asset("/features/audio-separation/bass.mp3"),
     rowTop: 1226,
     cover: { x: 1296, y: 1226, w: 147, h: 31, bg: "#3b3a3a" },
     bars: { x: 1299, y: 1230, w: 141, h: 23 },

@@ -8,6 +8,14 @@ Songdio 官网落地页项目，按版本分目录管理。
 
 这是 V2 的主实现（Vite + React），包含 Hero 视频、功能卡片交互、评价轮播等完整落地页。
 
+### 在线预览（公开可访问）
+
+- Preview: https://cocolayuan.github.io/Songdio-landing-page/
+
+由 GitHub Pages 自动部署 `main` 分支上的最新 V2 构建产物，他人无需启动本地服务即可查看。
+
+### 本地开发
+
 ```bash
 cd "V2/Figma Make Visual to HTML"
 npm install

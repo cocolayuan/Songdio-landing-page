@@ -26,6 +26,7 @@ import imgUnion from "./b05a09a965d7367e1be353ee2e0127c6c9eab153.png";
 import imgFrame58 from "./226049655f3871f3dac264b316138eae1882ff2f.png";
 import imgImage575 from "./fc9ebb09160f6231ecc3418b0eda9f820e97d4b1.png";
 import { imgFrame37 } from "./svg-z4k2a";
+import { asset } from "../../lib/asset";
 
 const FEATURE_CARD_CLASS = "bg-[#202020] content-stretch flex flex-col h-[311px] w-[332px] items-start p-[28px] relative rounded-[24px] shrink-0";
 const FEATURE_COPY_CLASS = "[word-break:break-word] content-stretch flex flex-col font-['Questrial:Regular',sans-serif] gap-[12px] items-start not-italic relative shrink-0 w-full max-w-full text-left";
@@ -1702,7 +1703,7 @@ function Frame81() {
   );
 }
 
-const COVER_AVATAR = (n: string) => `/features/cover-avatars/${n}.png?v=20260721b`;
+const COVER_AVATAR = (n: string) => `${asset(`/features/cover-avatars/${n}.png`)}?v=20260721b`;
 
 /**
  * "Cover Songs with Your Voice" avatar cluster.

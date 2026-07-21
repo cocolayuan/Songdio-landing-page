@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { VideoPlayerModal } from "./video-player-modal";
 
-const VIDEO_SRC = "/features/Text-to-MV-video.mp4";
+import { asset } from "../../lib/asset";
+
+const VIDEO_SRC = asset("/features/Text-to-MV-video.mp4");
 
 /**
  * Click-to-play for Text-to-MV (5th module).

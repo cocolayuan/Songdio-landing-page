@@ -1,7 +1,9 @@
 import React, { useRef, useState, type MouseEvent } from "react";
 import imgImage568 from "../../imports/HtmlFe/ef2c5c1194283c05595e341b34e920c62e8bac2e.png";
 
-const AUDIO_SRC = "/features/Image-to-Music-audio.mp3";
+import { asset } from "../../lib/asset";
+
+const AUDIO_SRC = asset("/features/Image-to-Music-audio.mp3");
 
 const PLAY_PATH =
   "M16.0012 10.8154C16.6637 11.2771 16.6637 12.2574 16.0012 12.7191L10.7798 16.3574C10.0107 16.8933 8.95646 16.343 8.95646 15.4055L8.95646 8.12896C8.95646 7.19155 10.0107 6.64122 10.7798 7.17714L16.0012 10.8154Z";

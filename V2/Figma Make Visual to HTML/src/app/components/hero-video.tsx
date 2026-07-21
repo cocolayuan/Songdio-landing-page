@@ -1,7 +1,9 @@
 import { useCallback, useEffect, useRef } from "react";
 import { scrollToElement } from "../../lib/scrollToElement";
 
-const VIDEO_SRC = "/Songdio开头视频.mp4";
+import { asset } from "../../lib/asset";
+
+const VIDEO_SRC = asset("/Songdio开头视频.mp4");
 
 type HeroVideoProps = {
   scrollTargetId: string;

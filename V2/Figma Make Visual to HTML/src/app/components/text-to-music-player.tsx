@@ -1,7 +1,9 @@
 import { HoverVideoPreview } from "./hover-video-preview";
 
-const COVER_SRC = "/features/Text-to-Music-cover.jpg";
-const VIDEO_SRC = "/features/Text-to-Music-video.mp4";
+import { asset } from "../../lib/asset";
+
+const COVER_SRC = asset("/features/Text-to-Music-cover.jpg");
+const VIDEO_SRC = asset("/features/Text-to-Music-video.mp4");
 
 /**
  * Text-to-Music (1st module) cover with hover-to-play preview.

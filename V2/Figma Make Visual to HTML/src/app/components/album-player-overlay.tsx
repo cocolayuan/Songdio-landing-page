@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from "react";
+import { asset } from "../../lib/asset";
 
 export type AlbumTrack = {
   id: number;
@@ -11,38 +12,38 @@ export type AlbumTrack = {
 export const ALBUM_TRACKS: AlbumTrack[] = [
   {
     id: 1,
-    cover: "/album-covers/01.png",
-    audio: "/album-tracks/01.mp3",
+    cover: asset("/album-covers/01.png"),
+    audio: asset("/album-tracks/01.mp3"),
     keywords: ["Chill R&B", "Sung-Rap"],
   },
   {
     id: 2,
-    cover: "/album-covers/02.png",
-    audio: "/album-tracks/02.m4a",
+    cover: asset("/album-covers/02.png"),
+    audio: asset("/album-tracks/02.m4a"),
     keywords: ["Dream Pop", "Ambient", "Ethereal", "Reverb"],
   },
   {
     id: 3,
-    cover: "/album-covers/03.png",
-    audio: "/album-tracks/03.m4a",
+    cover: asset("/album-covers/03.png"),
+    audio: asset("/album-tracks/03.m4a"),
     keywords: ["Indie", "Melancholic"],
   },
   {
     id: 4,
-    cover: "/album-covers/04.png",
-    audio: "/album-tracks/04.m4a",
+    cover: asset("/album-covers/04.png"),
+    audio: asset("/album-tracks/04.m4a"),
     keywords: ["Electronic", "Pulse", "Happy"],
   },
   {
     id: 5,
-    cover: "/album-covers/05.png",
-    audio: "/album-tracks/05.m4a",
+    cover: asset("/album-covers/05.png"),
+    audio: asset("/album-tracks/05.m4a"),
     keywords: ["Lofi", "Melancholy", "Ambient", "Breakup"],
   },
   {
     id: 6,
-    cover: "/album-covers/06.png",
-    audio: "/album-tracks/06.m4a",
+    cover: asset("/album-covers/06.png"),
+    audio: asset("/album-tracks/06.m4a"),
     keywords: ["Folk", "Warm"],
   },
 ];

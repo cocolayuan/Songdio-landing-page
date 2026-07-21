@@ -1,9 +1,11 @@
-const TILE1_BG = "/features/exploration/tile1-bg.png";
-const TILE2_BG = "/features/exploration/tile2-bg.png";
-const TILE2_FRONT = "/features/exploration/tile2-front.png";
-const TILE3_BG = "/features/exploration/tile3-bg.png";
-const TILE3_FRONT = "/features/exploration/tile3-front.png";
-const TILE4_BG = "/features/exploration/tile4-bg.png";
+import { asset } from "../../lib/asset";
+
+const TILE1_BG = asset("/features/exploration/tile1-bg.png");
+const TILE2_BG = asset("/features/exploration/tile2-bg.png");
+const TILE2_FRONT = asset("/features/exploration/tile2-front.png");
+const TILE3_BG = asset("/features/exploration/tile3-bg.png");
+const TILE3_FRONT = asset("/features/exploration/tile3-front.png");
+const TILE4_BG = asset("/features/exploration/tile4-bg.png");
 
 const DOT_FONT = "font-['Dotrice',sans-serif] not-italic text-[16px] text-white leading-[0]";
 

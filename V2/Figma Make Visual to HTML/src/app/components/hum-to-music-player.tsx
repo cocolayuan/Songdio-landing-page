@@ -3,7 +3,9 @@ import imgMiyukiBackground from "../../imports/image-1.png";
 import imgMiyukiAvatar from "../../imports/HtmlFe/15989e9c8038f72114ee45814a84f84928f4a686.png";
 import imgWaveformBg from "../../imports/image-3.png";
 
-const AUDIO_SRC = "/features/Hum-to-Music -audio.mp3";
+import { asset } from "../../lib/asset";
+
+const AUDIO_SRC = asset("/features/Hum-to-Music -audio.mp3");
 
 const PAUSE_PATH = "M8 7h2.5v10H8zm5 0h2.5v10H13z";
 

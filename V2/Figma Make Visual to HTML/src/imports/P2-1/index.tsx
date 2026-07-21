@@ -4,6 +4,7 @@ import imgBg from "./bf755f6453a48072057b8953a4f8d8d3c7fc6a12.png";
 import imgRectangle60 from "./997480ac9f15d34c3046b7cc5cf5d4d59dec7b45.png";
 import imgRectangle61 from "./594a98b5b7f4130a8f31a38c127a36e7ef1f7e4e.png";
 import imgRectangle62 from "./4f6a0834bb2598acb162415f5576c4bcdbe80ac3.png";
+import { asset } from "../../lib/asset";
 
 function Frame6() {
   return (
@@ -53,14 +54,14 @@ const REVIEWS: Review[] = [
     rating: "4.7",
   },
   {
-    avatar: "/creators-avatar/avatar-kora.jpg",
+    avatar: asset("/creators-avatar/avatar-kora.jpg"),
     name: "Kora",
     body: "Songdio is a total game-changer for creating music without any steep learning curve. The audio quality and vocal realism are genuinely mind-blowing!",
     location: "Russia",
     rating: "4.9",
   },
   {
-    avatar: "/creators-avatar/avatar-rayna.jpg",
+    avatar: asset("/creators-avatar/avatar-rayna.jpg"),
     name: "Rayna",
     body: "Songdio has completely transformed how I create music.",
     location: "Germany",

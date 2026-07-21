@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { VideoPlayerModal } from "./video-player-modal";
 
-const VIDEO_SRC = "/features/Music-to-MV-video.mp4?v=20260720";
+import { asset } from "../../lib/asset";
+
+const VIDEO_SRC = `${asset("/features/Music-to-MV-video.mp4")}?v=20260720`;
 
 /**
  * Click-to-play for Music-to-MV (4th module).

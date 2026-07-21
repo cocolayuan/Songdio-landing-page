@@ -20,6 +20,15 @@ export default function HeroVideo({ scrollTargetId, onReachedP2 }: HeroVideoProp
     void video.play();
   }, []);
 
+  const releaseVideo = useCallback(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    video.pause();
+    // Drop the media source so the decoder / compositor layer can be freed.
+    video.removeAttribute("src");
+    video.load();
+  }, []);
+
   const scrollToP2 = useCallback(async () => {
     if (hasTransitionedRef.current) return;
 
@@ -30,9 +39,10 @@ export default function HeroVideo({ scrollTargetId, onReachedP2 }: HeroVideoProp
     }
 
     hasTransitionedRef.current = true;
-    await scrollToElement(target, { duration: 300, easing: "easeInOut" });
+    await scrollToElement(target);
     onReachedP2?.();
-  }, [scrollTargetId, onReachedP2]);
+    releaseVideo();
+  }, [scrollTargetId, onReachedP2, releaseVideo]);
 
   const handleVideoError = () => {
     console.warn("[HeroVideo] Failed to load video:", VIDEO_SRC);
@@ -47,6 +57,7 @@ export default function HeroVideo({ scrollTargetId, onReachedP2 }: HeroVideoProp
         autoPlay
         muted
         playsInline
+        preload="auto"
         onEnded={scrollToP2}
         onError={handleVideoError}
       />

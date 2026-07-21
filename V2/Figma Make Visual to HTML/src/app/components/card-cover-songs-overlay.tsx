@@ -1,4 +1,4 @@
-import { useMemo, useState, useRef } from "react";
+import { useMemo } from "react";
 import imgCardBg from "../../imports/CardCoverSongs/226049655f3871f3dac264b316138eae1882ff2f.png";
 import imgAvatar from "../../imports/CardCoverSongs/18588dce218efa9b3a760cf06ce5211568b15630.png";
 
@@ -26,10 +26,6 @@ function barHeight(x: number): number {
 }
 
 export function CardCoverSongsOverlay() {
-  const [hovered, setHovered] = useState(false);
-  const [spinning, setSpinning] = useState(false);
-  const spinTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-
   const bars = useMemo(() => {
     const out: { x: number; h: number }[] = [];
     for (let x = 1.5; x <= WAVE_W - 1.5; x += BAR_STEP) {
@@ -41,33 +37,13 @@ export function CardCoverSongsOverlay() {
 
   return (
     <>
-      <style>{`
-        @keyframes cardBarPulse {
-          0%,100% { transform: scaleY(0.72); }
-          50%     { transform: scaleY(1); }
-        }
-      `}</style>
-
       <div
-        className="absolute rounded-[54px] overflow-hidden pointer-events-auto"
+        className="absolute rounded-[54px] overflow-hidden pointer-events-none"
         style={{
           left: 1194,
           top: 2051,
           width: 278,
           height: 102,
-          transition: "transform 1.5s ease-in-out",
-          transform: spinning ? "rotate(360deg)" : "rotate(0deg)",
-        }}
-        onMouseEnter={() => {
-          setHovered(true);
-          setSpinning(true);
-          if (spinTimeoutRef.current) clearTimeout(spinTimeoutRef.current);
-          spinTimeoutRef.current = setTimeout(() => setSpinning(false), 1500);
-        }}
-        onMouseLeave={() => {
-          setHovered(false);
-          setSpinning(false);
-          if (spinTimeoutRef.current) clearTimeout(spinTimeoutRef.current);
         }}
       >
         {/* ── Layer 1: orange background gradients ── */}
@@ -119,8 +95,6 @@ export function CardCoverSongsOverlay() {
           fill="none"
         >
           {bars.map((bar, i) => {
-            // Gentle, position-based stagger so the pulse ripples across.
-            const delay = (bar.x / WAVE_W) * 0.9;
             return (
               <rect
                 key={i}
@@ -134,9 +108,6 @@ export function CardCoverSongsOverlay() {
                   {
                     transformBox: "fill-box",
                     transformOrigin: "50% 50%",
-                    animation: hovered
-                      ? `cardBarPulse 1.4s ${delay.toFixed(2)}s ease-in-out infinite`
-                      : "none",
                   } as React.CSSProperties
                 }
               />

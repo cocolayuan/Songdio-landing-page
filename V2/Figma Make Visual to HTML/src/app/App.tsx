@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import HtmlFe from "../imports/HtmlFe";
 import P2New from "../imports/P2-1";
-import { CardEffects } from "./components/card-effects";
+import { HumToMusicPlayer } from "./components/hum-to-music-player";
 import { CardCoverSongsOverlay } from "./components/card-cover-songs-overlay";
 import HeroVideo from "./components/hero-video";
 
@@ -110,7 +110,7 @@ export default function App() {
               <P2New />
             </div>
 
-            <CardEffects />
+            <HumToMusicPlayer />
             <CardCoverSongsOverlay />
           </div>
         </div>

@@ -1,3 +1,12 @@
 @import './fonts.css';
 @import './tailwind.css';
 @import './theme.css';
+
+/* Hide horizontal scrollbar on carousels while keeping scrollability */
+.scrollbar-hidden {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}

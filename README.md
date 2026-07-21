@@ -2,30 +2,36 @@
 
 Songdio 官网落地页项目，按版本分目录管理。
 
-## 目录结构
+## 最新版本
 
-```
-Songdio-landing-page/
-├── V1-testing/   # V1 测试版（Hero 视频 + 音乐轮播）
-├── V2/           # V2 开发中（当前活跃版本）
-└── README.md
-```
+**当前以 `V2/Figma Make Visual to HTML/` 为最新内容。**
 
-## 快速开始
-
-进入对应版本目录后安装依赖并启动：
+这是 V2 的主实现（Vite + React），包含 Hero 视频、功能卡片交互、评价轮播等完整落地页。
 
 ```bash
-cd V2
+cd "V2/Figma Make Visual to HTML"
 npm install
 npm run dev
 ```
 
-浏览器打开 [http://localhost:3000](http://localhost:3000)。
+浏览器打开 [http://localhost:5173](http://localhost:5173)。
+
+## 目录结构
+
+```
+Songdio-landing-page/
+├── V1-testing/                      # V1 测试版（归档）
+├── V2/
+│   ├── Figma Make Visual to HTML/   # ✅ 最新：V2 主落地页（Vite）
+│   ├── app/ components/ ...         # 早期 Next.js 实验目录（非最新）
+│   └── ...
+└── README.md
+```
 
 ## 版本说明
 
-| 版本 | 状态 | 说明 |
-|------|------|------|
-| V1-testing | 归档 | 首版原型：全屏 Hero 视频 + 音乐卡片轮播 |
-| V2 | 开发中 | 新版落地页 |
+| 版本 | 路径 | 状态 | 说明 |
+|------|------|------|------|
+| V1-testing | `V1-testing/` | 归档 | 首版原型：全屏 Hero 视频 + 音乐卡片轮播 |
+| V2（最新） | `V2/Figma Make Visual to HTML/` | 活跃 | Figma 转 HTML 完整落地页 |
+| V2（旧实验） | `V2/` 根下 Next.js 目录 | 非最新 | 早期 3D 专辑轮播实验，请勿当作当前版本 |

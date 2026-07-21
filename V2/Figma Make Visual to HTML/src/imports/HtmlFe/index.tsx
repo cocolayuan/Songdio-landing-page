@@ -5,13 +5,11 @@ import { TextToMvPlayer } from "../../app/components/text-to-mv-player";
 import { MusicToMvPlayer } from "../../app/components/music-to-mv-player";
 import { TextToMusicPlayer } from "../../app/components/text-to-music-player";
 import { ImageToMusicPlayer } from "../../app/components/image-to-music-player";
+import { ExplorationTiles } from "../../app/components/exploration-tiles";
+import { AudioSeparationPlayer } from "../../app/components/audio-separation-player";
 import imgImage568 from "./ef2c5c1194283c05595e341b34e920c62e8bac2e.png";
 import imgImage569 from "./20310161dffbb24bd447d6f41a8b262d3545eb0d.png";
 import imgImage576 from "./eef35be7110852ab48ab791a0df855a8b5eb488f.png";
-import imgImage577 from "./856bfc631f4bb324b52d279f741bd82173604654.png";
-import imgImage578 from "./3ae009be8e95ecc7363012c27405db3d4e0a8a2c.png";
-import imgImage579 from "./eb6a2ab647ef093c68637a14b08c516154752c9b.png";
-import imgImage580 from "./1f663122fa50f443bd57e95f9240f3118b377d15.png";
 import imgRectangle60 from "./997480ac9f15d34c3046b7cc5cf5d4d59dec7b45.png";
 import imgRectangle61 from "./594a98b5b7f4130a8f31a38c127a36e7ef1f7e4e.png";
 import imgRectangle62 from "./4f6a0834bb2598acb162415f5576c4bcdbe80ac3.png";
@@ -27,8 +25,6 @@ import imgImage574 from "./15989e9c8038f72114ee45814a84f84928f4a686.png";
 import imgUnion from "./b05a09a965d7367e1be353ee2e0127c6c9eab153.png";
 import imgFrame58 from "./226049655f3871f3dac264b316138eae1882ff2f.png";
 import imgImage575 from "./fc9ebb09160f6231ecc3418b0eda9f820e97d4b1.png";
-import imgImage581 from "./2012f7d47cff5b1b88907ab1da1467651199d173.png";
-import imgImage582 from "./342bd0e889ce68ba79964f62fe47256a53cf26ce.png";
 import { imgFrame37 } from "./svg-z4k2a";
 
 const FEATURE_CARD_CLASS = "bg-[#202020] content-stretch flex flex-col h-[311px] w-[332px] items-start p-[28px] relative rounded-[24px] shrink-0";
@@ -420,7 +416,7 @@ function Frame45() {
         <p className="leading-[1.526]">{`Letter from the Sea `}</p>
       </div>
       <div className="flex flex-col font-['Inter:Regular',sans-serif] font-normal h-[12px] justify-center relative shrink-0 text-[9px] text-[rgba(255,255,255,0.53)] w-full">
-        <p className="leading-[1.63]">{`Ambient Music . Lo-fi Chill. `}</p>
+        <p className="leading-[1.63]">{`Instrumental . Soundtrack . `}</p>
       </div>
     </div>
   );
@@ -519,61 +515,13 @@ function Frame49() {
   );
 }
 
-function Frame51() {
-  return (
-    <div className="absolute h-[23px] left-[9px] top-[4px] w-[106px]">
-      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 106 23">
-        <g clipPath="url(#clip0_1_1293)" id="Frame 59">
-          <g id="Union">
-            <path d={svgPaths.p2e6bda00} fill="var(--fill-0, white)" />
-            <path d={svgPaths.p2e6bda00} fill="url(#paint0_linear_1_1293)" />
-            <path d={svgPaths.p2e6bda00} fill="url(#paint1_radial_1_1293)" style={{ mixBlendMode: "color" }} />
-            <path d={svgPaths.p2e6bda00} fill="url(#paint2_linear_1_1293)" />
-            <path d={svgPaths.p2e6bda00} fill="url(#paint3_linear_1_1293)" style={{ mixBlendMode: "lighten" }} />
-            <path d={svgPaths.p2e6bda00} fill="url(#paint4_radial_1_1293)" style={{ mixBlendMode: "color" }} />
-          </g>
-        </g>
-        <defs>
-          <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_1_1293" x1="195.349" x2="174.257" y1="23" y2="-52.7948">
-            <stop stopColor="#FFC928" />
-            <stop offset="1" stopColor="white" stopOpacity="0" />
-          </linearGradient>
-          <radialGradient cx="0" cy="0" gradientTransform="matrix(-119.034 -23.4075 84.2689 -13.3335 105.034 23)" gradientUnits="userSpaceOnUse" id="paint1_radial_1_1293" r="1">
-            <stop offset="0.394231" stopColor="#82B806" />
-            <stop offset="1" stopColor="white" stopOpacity="0" />
-          </radialGradient>
-          <linearGradient gradientUnits="userSpaceOnUse" id="paint2_linear_1_1293" x1="-11.7279" x2="9.31409" y1="23" y2="-52.1143">
-            <stop stopColor="#B687EB" />
-            <stop offset="1" stopColor="white" stopOpacity="0" />
-          </linearGradient>
-          <linearGradient gradientUnits="userSpaceOnUse" id="paint3_linear_1_1293" x1="78.9964" x2="78.9964" y1="0" y2="23">
-            <stop stopColor="#FFB777" />
-            <stop offset="1" stopColor="white" stopOpacity="0" />
-          </linearGradient>
-          <radialGradient cx="0" cy="0" gradientTransform="translate(93.0105) rotate(90) scale(23 138.152)" gradientUnits="userSpaceOnUse" id="paint4_radial_1_1293" r="1">
-            <stop stopColor="#FFCB48" />
-            <stop offset="1" stopColor="white" stopOpacity="0" />
-          </radialGradient>
-          <clipPath id="clip0_1_1293">
-            <rect fill="white" height="23" width="106" />
-          </clipPath>
-        </defs>
-      </svg>
-    </div>
-  );
-}
-
 function Frame50() {
-  return (
-    <div className="h-[31px] overflow-clip relative rounded-[12px] shrink-0 w-[137px]">
-      <Frame51 />
-    </div>
-  );
+  return <div className="h-[31px] overflow-clip relative rounded-[12px] shrink-0 w-[135px]" />;
 }
 
 function Frame48() {
   return (
-    <div className="absolute bg-[#222] content-stretch flex items-center justify-between left-[1206px] pl-[12px] pr-[4px] rounded-[12px] top-[1109px] w-[254px]">
+    <div className="absolute bg-[#222] content-stretch flex items-center justify-between left-[1195px] pl-[12px] pr-[28px] rounded-[12px] top-[1109px] w-[276px]">
       <Frame49 />
       <Frame50 />
     </div>
@@ -607,61 +555,13 @@ function Frame53() {
   );
 }
 
-function Frame55() {
-  return (
-    <div className="h-[23px] relative shrink-0 w-[93px]">
-      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 93 23">
-        <g clipPath="url(#clip0_1_1234)" id="Frame 59">
-          <g id="Union">
-            <path d={svgPaths.p21f4bb00} fill="var(--fill-0, white)" />
-            <path d={svgPaths.p21f4bb00} fill="url(#paint0_linear_1_1234)" />
-            <path d={svgPaths.p21f4bb00} fill="url(#paint1_radial_1_1234)" />
-            <path d={svgPaths.p21f4bb00} fill="url(#paint2_linear_1_1234)" />
-            <path d={svgPaths.p21f4bb00} fill="url(#paint3_linear_1_1234)" />
-            <path d={svgPaths.p21f4bb00} fill="url(#paint4_radial_1_1234)" />
-          </g>
-        </g>
-        <defs>
-          <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_1_1234" x1="145.349" x2="124.257" y1="23" y2="-52.7948">
-            <stop offset="0.752242" stopColor="#FC7FAA" />
-            <stop offset="1" stopColor="white" stopOpacity="0" />
-          </linearGradient>
-          <radialGradient cx="0" cy="0" gradientTransform="matrix(-119.034 -23.4075 84.2689 -13.3335 55.0338 23)" gradientUnits="userSpaceOnUse" id="paint1_radial_1_1234" r="1">
-            <stop offset="0.549748" stopColor="#AFE8FC" />
-            <stop offset="1" stopColor="white" stopOpacity="0" />
-          </radialGradient>
-          <linearGradient gradientUnits="userSpaceOnUse" id="paint2_linear_1_1234" x1="-61.7279" x2="-40.6859" y1="23" y2="-52.1143">
-            <stop stopColor="#A1A2FC" />
-            <stop offset="1" stopColor="white" stopOpacity="0" />
-          </linearGradient>
-          <linearGradient gradientUnits="userSpaceOnUse" id="paint3_linear_1_1234" x1="28.9964" x2="28.9964" y1="0" y2="23">
-            <stop stopColor="#CD76FC" />
-            <stop offset="1" stopColor="white" stopOpacity="0" />
-          </linearGradient>
-          <radialGradient cx="0" cy="0" gradientTransform="matrix(2.33622 24.382 -188.96 0.563346 40.6743 -1.38204)" gradientUnits="userSpaceOnUse" id="paint4_radial_1_1234" r="1">
-            <stop stopColor="white" />
-            <stop offset="1" stopColor="white" stopOpacity="0" />
-          </radialGradient>
-          <clipPath id="clip0_1_1234">
-            <rect fill="white" height="23" width="93" />
-          </clipPath>
-        </defs>
-      </svg>
-    </div>
-  );
-}
-
 function Frame54() {
-  return (
-    <div className="content-stretch flex flex-col items-start justify-center overflow-clip px-[8px] py-[4px] relative rounded-[12px] shrink-0 w-[122px]">
-      <Frame55 />
-    </div>
-  );
+  return <div className="content-stretch flex flex-col h-[31px] items-start justify-center overflow-clip px-[8px] py-[4px] relative rounded-[12px] shrink-0 w-[120px]" />;
 }
 
 function Frame52() {
   return (
-    <div className="absolute bg-[#434343] content-stretch flex items-center justify-between left-[1206px] pl-[12px] pr-[4px] rounded-[12px] top-[1148px] w-[254px]">
+    <div className="absolute bg-[#434343] content-stretch flex items-center justify-between left-[1195px] pl-[12px] pr-[28px] rounded-[12px] top-[1148px] w-[276px]">
       <Frame53 />
       <Frame54 />
     </div>
@@ -709,55 +609,13 @@ function Frame57() {
   );
 }
 
-function Frame59() {
-  return (
-    <div className="absolute h-[23px] left-[3px] top-[4px] w-[135px]">
-      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 135 23">
-        <g clipPath="url(#clip0_1_1100)" id="Frame 59">
-          <g id="Union">
-            <path d={svgPaths.p10897600} fill="url(#paint0_radial_1_1100)" />
-            <path d={svgPaths.p10897600} fill="url(#paint1_linear_1_1100)" />
-            <path d={svgPaths.p10897600} fill="url(#paint2_linear_1_1100)" />
-            <path d={svgPaths.p10897600} fill="url(#paint3_radial_1_1100)" style={{ mixBlendMode: "multiply" }} />
-          </g>
-        </g>
-        <defs>
-          <radialGradient cx="0" cy="0" gradientTransform="matrix(-160.297 -23.4075 84.2689 -17.9555 133.297 23)" gradientUnits="userSpaceOnUse" id="paint0_radial_1_1100" r="1">
-            <stop stopColor="white" stopOpacity="0.05" />
-            <stop offset="0.96727" stopColor="white" />
-          </radialGradient>
-          <linearGradient gradientUnits="userSpaceOnUse" id="paint1_linear_1_1100" x1="-27" x2="-5.42567" y1="23" y2="-53.1789">
-            <stop stopColor="#5B73FF" />
-            <stop offset="1" stopColor="white" stopOpacity="0" />
-          </linearGradient>
-          <linearGradient gradientUnits="userSpaceOnUse" id="paint2_linear_1_1100" x1="-27" x2="-5.42567" y1="23" y2="-53.1789">
-            <stop stopColor="white" stopOpacity="0" />
-            <stop offset="1" stopColor="#87ADFF" />
-          </linearGradient>
-          <radialGradient cx="0" cy="0" gradientTransform="matrix(-160.297 -23.4075 84.2689 -17.9555 133.297 23)" gradientUnits="userSpaceOnUse" id="paint3_radial_1_1100" r="1">
-            <stop offset="0.0327301" stopColor="#CDF0FF" />
-            <stop offset="1" stopColor="white" stopOpacity="0.05" />
-          </radialGradient>
-          <clipPath id="clip0_1_1100">
-            <rect fill="white" height="23" width="135" />
-          </clipPath>
-        </defs>
-      </svg>
-    </div>
-  );
-}
-
 function Frame58() {
-  return (
-    <div className="h-[31px] overflow-clip relative rounded-[12px] shrink-0 w-[149px]">
-      <Frame59 />
-    </div>
-  );
+  return <div className="h-[31px] overflow-clip relative rounded-[12px] shrink-0 w-[147px]" />;
 }
 
 function Frame56() {
   return (
-    <div className="absolute bg-[#3b3a3a] content-stretch flex items-center justify-between left-[1206px] pl-[12px] pr-[4px] rounded-[12px] top-[1226px] w-[254px]">
+    <div className="absolute bg-[#3b3a3a] content-stretch flex items-center justify-between left-[1195px] pl-[12px] pr-[28px] rounded-[12px] top-[1226px] w-[276px]">
       <Frame57 />
       <Frame58 />
     </div>
@@ -794,61 +652,13 @@ function Frame61() {
   );
 }
 
-function Frame63() {
-  return (
-    <div className="h-[23px] relative shrink-0 w-[145px]">
-      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 145 23">
-        <g clipPath="url(#clip0_1_1181)" id="Frame 59">
-          <g id="Union">
-            <path d={svgPaths.p1b056000} fill="var(--fill-0, white)" />
-            <path d={svgPaths.p1b056000} fill="url(#paint0_linear_1_1181)" />
-            <path d={svgPaths.p1b056000} fill="url(#paint1_radial_1_1181)" />
-            <path d={svgPaths.p1b056000} fill="url(#paint2_linear_1_1181)" />
-            <path d={svgPaths.p1b056000} fill="url(#paint3_linear_1_1181)" />
-            <path d={svgPaths.p1b056000} fill="url(#paint4_radial_1_1181)" />
-          </g>
-        </g>
-        <defs>
-          <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_1_1181" x1="177.349" x2="156.257" y1="23" y2="-52.7948">
-            <stop offset="0.752242" stopColor="#80D3FF" />
-            <stop offset="1" stopColor="white" stopOpacity="0" />
-          </linearGradient>
-          <radialGradient cx="0" cy="0" gradientTransform="matrix(-119.034 -23.4075 84.2689 -13.3335 87.0338 23)" gradientUnits="userSpaceOnUse" id="paint1_radial_1_1181" r="1">
-            <stop offset="0.0327301" stopColor="#FFFCB1" />
-            <stop offset="1" stopColor="white" stopOpacity="0" />
-          </radialGradient>
-          <linearGradient gradientUnits="userSpaceOnUse" id="paint2_linear_1_1181" x1="-29.7279" x2="-8.68591" y1="23" y2="-52.1143">
-            <stop stopColor="#ACE492" />
-            <stop offset="1" stopColor="white" stopOpacity="0" />
-          </linearGradient>
-          <linearGradient gradientUnits="userSpaceOnUse" id="paint3_linear_1_1181" x1="60.9964" x2="60.9964" y1="0" y2="23">
-            <stop stopColor="#77FFD9" />
-            <stop offset="1" stopColor="white" stopOpacity="0" />
-          </linearGradient>
-          <radialGradient cx="0" cy="0" gradientTransform="translate(75.0105) rotate(90) scale(23 178.249)" gradientUnits="userSpaceOnUse" id="paint4_radial_1_1181" r="1">
-            <stop stopColor="white" stopOpacity="0.8" />
-            <stop offset="1" stopColor="white" stopOpacity="0" />
-          </radialGradient>
-          <clipPath id="clip0_1_1181">
-            <rect fill="white" height="23" width="145" />
-          </clipPath>
-        </defs>
-      </svg>
-    </div>
-  );
-}
-
 function Frame62() {
-  return (
-    <div className="content-stretch flex flex-col items-start justify-center overflow-clip px-[8px] py-[4px] relative rounded-[12px] shrink-0 w-[142px]">
-      <Frame63 />
-    </div>
-  );
+  return <div className="content-stretch flex flex-col h-[31px] items-start justify-center overflow-clip px-[8px] py-[4px] relative rounded-[12px] shrink-0 w-[140px]" />;
 }
 
 function Frame60() {
   return (
-    <div className="absolute bg-[#222] content-stretch flex gap-[18px] items-center left-[1206px] px-[12px] rounded-[12px] top-[1187px] w-[254px]">
+    <div className="absolute bg-[#222] content-stretch flex gap-[18px] items-center left-[1195px] pl-[12px] pr-[28px] rounded-[12px] top-[1187px] w-[276px]">
       <Frame61 />
       <Frame62 />
     </div>
@@ -868,7 +678,6 @@ function Component() {
       <div className="absolute h-[153px] left-[822px] rounded-[24px] shadow-[0px_4px_7px_1px_rgba(120,118,118,0.21)] top-[757px] w-[278px]" data-name="image 569">
         <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[24px] size-full" src={imgImage569} />
       </div>
-      <Frame47 />
       <TextToMvPlayer />
       <div className="absolute flex h-[153px] items-center justify-center left-[450px] top-[757px] w-[278px]">
         <div className="-scale-y-100 flex-none rotate-180">
@@ -878,24 +687,12 @@ function Component() {
         </div>
       </div>
       <MusicToMvPlayer />
-      <div className="absolute h-[70px] left-[829px] rounded-[20px] top-[1100px] w-[126px]" data-name="image 577">
-        <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[20px]">
-          <img alt="" className="absolute h-[104.69%] left-[-3.24%] max-w-none top-[-4.16%] w-[116.32%]" src={imgImage577} />
-        </div>
-      </div>
-      <div className="absolute h-[70px] left-[967px] rounded-[20px] top-[1100px] w-[126px]" data-name="image 578">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[20px] size-full" src={imgImage578} />
-      </div>
-      <div className="absolute h-[70px] left-[828px] rounded-[20px] top-[1182px] w-[126px]" data-name="image 579">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[20px] size-full" src={imgImage579} />
-      </div>
-      <div className="absolute h-[70px] left-[966px] rounded-[20px] top-[1182px] w-[126px]" data-name="image 580">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[20px] size-full" src={imgImage580} />
-      </div>
+      <ExplorationTiles />
       <Frame48 />
       <Frame52 />
       <Frame56 />
       <Frame60 />
+      <AudioSeparationPlayer />
       </div>
     </div>
   );
@@ -1905,33 +1702,55 @@ function Frame81() {
   );
 }
 
+const COVER_AVATAR = (n: string) => `/features/cover-avatars/${n}.png?v=20260721b`;
+
+/**
+ * "Cover Songs with Your Voice" avatar cluster.
+ * Rebuilt 1:1 from Figma node 909:4622 (8 scattered avatars with conic rings),
+ * placed inside the existing 278×163 card. Static display — no hover animation.
+ */
 function Frame83() {
   return (
-    <div className="absolute bg-[#302f2f] h-[163px] left-[450px] rounded-[24px] top-[2376px] w-[278px]">
-      <div className="absolute left-[22px] rounded-[60px] size-[80px] top-[4px]" data-name="image 574">
-        <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[60px]">
-          <img alt="" className="absolute h-[189.52%] left-[-15.4%] max-w-none top-[5.39%] w-[121.15%]" src={imgImage574} />
+    <div className="absolute bg-[#302f2f] h-[153px] left-[446px] rounded-[24px] top-[2386px] w-[278px] overflow-hidden">
+      {/* 05 */}
+      <div className="absolute left-[47px] rounded-[60px] size-[50px] top-[100px] overflow-hidden">
+        <img alt="" className="absolute inset-0 size-full object-cover" src={COVER_AVATAR("05")} />
+      </div>
+      {/* 01 (top nudged down 1px so it stays fully visible) */}
+      <div className="absolute left-[18px] rounded-[60px] size-[80px] top-[0px] overflow-hidden">
+        <img alt="" className="absolute inset-0 size-full object-cover" src={COVER_AVATAR("01")} />
+      </div>
+      {/* 02 */}
+      <div className="absolute left-[188px] rounded-[50px] size-[80px] top-[73px] overflow-hidden">
+        <img alt="" className="absolute inset-0 size-full object-cover" src={COVER_AVATAR("02")} />
+      </div>
+      {/* 06 */}
+      <div className="absolute left-[224px] opacity-50 rounded-[50px] size-[44px] top-[22px] overflow-hidden">
+        <img alt="" className="absolute inset-0 size-full object-cover" src={COVER_AVATAR("06")} />
+      </div>
+      {/* 04 */}
+      <div className="absolute left-[136px] rounded-[50px] size-[64px] top-[2px] overflow-hidden">
+        <img alt="" className="absolute inset-0 size-full object-cover" src={COVER_AVATAR("04")} />
+      </div>
+      {/* 03 */}
+      <div className="absolute flex items-center justify-center left-[97px] size-[68.623px] top-[60px]">
+        <div className="flex-none rotate-[5.93deg]">
+          <div className="relative rounded-[50px] size-[62.504px] overflow-hidden">
+            <img alt="" className="absolute inset-0 size-full object-cover" src={COVER_AVATAR("03")} />
+          </div>
         </div>
       </div>
-      <div className="absolute left-[191px] rounded-[60px] size-[80px] top-[68px]" data-name="image 578">
-        <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[60px]">
-          <img alt="" className="absolute h-[189.52%] left-[-15.4%] max-w-none top-[5.39%] w-[121.15%]" src={imgImage574} />
+      {/* 07 */}
+      <div className="absolute flex items-center justify-center left-[152px] size-[32px] top-[121px]">
+        <div className="-scale-y-100 flex-none rotate-180">
+          <div className="opacity-40 relative rounded-[50px] size-[32px] overflow-hidden">
+            <img alt="" className="absolute inset-0 size-full object-cover" src={COVER_AVATAR("07")} />
+          </div>
         </div>
       </div>
-      <div className="absolute left-[139px] rounded-[50px] size-[60px] top-[8px]" data-name="image 575">
-        <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[50px]">
-          <img alt="" className="absolute h-[189.52%] left-[-15.4%] max-w-none top-[-49.37%] w-[121.15%]" src={imgImage581} />
-        </div>
-      </div>
-      <div className="absolute left-[114px] rounded-[50px] size-[50px] top-[74px]" data-name="image 576">
-        <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[50px]">
-          <img alt="" className="absolute h-[221.16%] left-[-15.91%] max-w-none top-[-49.89%] w-[147.44%]" src={imgImage582} />
-        </div>
-      </div>
-      <div className="absolute left-[47px] rounded-[50px] size-[47px] top-[99px]" data-name="image 577">
-        <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[50px]">
-          <img alt="" className="absolute h-[189.6%] left-[-18.31%] max-w-none top-[6.65%] w-[121.2%]" src={imgImage574} />
-        </div>
+      {/* 08 */}
+      <div className="absolute left-[9px] opacity-30 rounded-[50px] size-[38px] top-[80px] overflow-hidden">
+        <img alt="" className="absolute inset-0 size-full object-cover pointer-events-none" src={COVER_AVATAR("08")} />
       </div>
     </div>
   );
@@ -1972,7 +1791,6 @@ export default function HtmlFe() {
       <Component />
       <P />
       <Frame83 />
-      <Frame84 />
     </div>
   );
 }

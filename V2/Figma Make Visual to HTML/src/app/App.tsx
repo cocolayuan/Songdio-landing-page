@@ -91,8 +91,8 @@ export default function App() {
          * native 1920×4400 and is shrunk via transform.
          */}
         <div
-          className="relative mx-auto overflow-hidden"
-          style={{ width: DESIGN_WIDTH * stageScale, height: DESIGN_HEIGHT * stageScale }}
+          className="relative mx-auto"
+          style={{ width: DESIGN_WIDTH * stageScale, height: DESIGN_HEIGHT * stageScale, overflow: "visible" }}
         >
           <div
             className="relative"
@@ -101,6 +101,14 @@ export default function App() {
               height: DESIGN_HEIGHT,
               transform: `scale(${stageScale})`,
               transformOrigin: "top left",
+              // Expose the current stage scale so full-bleed sections below the
+              // hero can compute a true viewport-width background:
+              //   width: calc(100vw / var(--stage-scale))
+              // which, once the parent transform re-applies `scale`, renders at
+              // exactly 100vw and fills the side gutters left by height-limited
+              // scaling.
+              ["--stage-scale" as string]: String(stageScale),
+              overflow: "visible",
             }}
           >
             <HtmlFe />

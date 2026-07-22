@@ -294,7 +294,11 @@ function SoWhatAreWeBuilding() {
 export default function P() {
   return (
     <div className="relative size-full bg-[#121111]" data-name="P2">
-      <div className="absolute h-[1849px] left-[-15px] top-[123px] w-[1920px]" data-name="BG">
+      <div
+        className="absolute h-[1849px] top-[123px] left-1/2 -translate-x-1/2"
+        style={{ width: "calc(100vw / var(--stage-scale, 1))" }}
+        data-name="BG"
+      >
         <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgBg} />
       </div>
       <LovedByCreatorsEverywhere />

@@ -668,7 +668,12 @@ function Frame60() {
 
 function Component() {
   return (
-    <div className="absolute h-[1435px] left-[-4px] overflow-visible top-[1248px] w-[1920px]" style={{ background: "linear-gradient(180deg, #000 0%, #121111 20%)" }} data-name="详细的功能">
+    <div className="absolute h-[1435px] left-0 overflow-visible top-[1248px] w-full" data-name="详细的功能">
+      {/* Full-bleed background: fills the side gutters left by height-limited stage scaling */}
+      <div
+        className="absolute inset-y-0 left-1/2 -translate-x-1/2 pointer-events-none"
+        style={{ width: "calc(100vw / var(--stage-scale, 1))", background: "linear-gradient(180deg, #000 0%, #121111 20%)" }}
+      />
       <div className="relative size-full" style={{ transform: "translateY(30px)" }}>
       <Frame25 />
       <Text />
@@ -1114,7 +1119,7 @@ function Group6() {
 
 function Frame11() {
   return (
-    <div className="absolute h-[249px] left-[401px] overflow-x-auto overflow-y-clip top-[337px] w-[1145px]">
+    <div className="absolute h-[249px] left-1/2 -translate-x-1/2 overflow-x-auto overflow-y-clip top-[337px] w-full max-w-[1145px] px-4">
       <Group1 />
       <Group2 />
       <Group3 />
@@ -1179,8 +1184,8 @@ function Frame69() {
 
 function P1() {
   return (
-    <div className="absolute h-[1849px] left-0 top-[2515px] w-[1920px]" style={{ backgroundImage: "linear-gradient(180deg, rgb(18, 17, 17) 0%, rgb(18, 17, 17) 46.133%, rgb(200, 236, 209) 52.749%, rgb(255, 255, 255) 69.055%)" }} data-name="P2">
-      <div className="absolute h-[780px] left-[-220px] top-[962px] w-[2361px]">
+    <div className="absolute h-[1849px] left-0 top-[2515px] w-full" style={{ backgroundImage: "linear-gradient(180deg, rgb(18, 17, 17) 0%, rgb(18, 17, 17) 46.133%, rgb(200, 236, 209) 52.749%, rgb(255, 255, 255) 69.055%)" }} data-name="P2">
+      <div className="absolute h-[780px] left-1/2 -translate-x-1/2 top-[962px] w-[2361px] max-w-[150%]">
         <div className="absolute inset-[-12.82%_-4.24%]">
           <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 2561 980">
             <g filter="url(#filter0_f_1_1148)" id="Ellipse 89">
@@ -1198,7 +1203,7 @@ function P1() {
       </div>
       <Frame64 />
       <Frame11 />
-      <div className="absolute h-[982px] left-[-220px] top-[1022px] w-[2361px]">
+      <div className="absolute h-[982px] left-1/2 -translate-x-1/2 top-[1022px] w-[2361px] max-w-[150%]">
         <div className="absolute inset-[-10.18%_-4.24%]">
           <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 2561 1182">
             <g filter="url(#filter0_f_1_1391)" id="Ellipse 88">
@@ -1416,7 +1421,7 @@ function Group14() {
 
 function Frame12() {
   return (
-    <div className="absolute h-[249px] left-[401px] overflow-x-auto overflow-y-clip top-[337px] w-[1145px]">
+    <div className="absolute h-[249px] left-1/2 -translate-x-1/2 overflow-x-auto overflow-y-clip top-[337px] w-full max-w-[1145px] px-4">
       <Group8 />
       <Group9 />
       <Group10 />
@@ -1536,8 +1541,8 @@ function Frame75() {
 
 function P2() {
   return (
-    <div className="absolute h-[1849px] left-0 top-[2515px] w-[1920px]" style={{ backgroundImage: "linear-gradient(180deg, rgb(18, 17, 17) 0%, rgb(18, 17, 17) 46.133%, rgb(200, 236, 209) 52.749%, rgb(255, 255, 255) 69.055%)" }} data-name="P2">
-      <div className="absolute h-[780px] left-[-220px] top-[962px] w-[2361px]">
+    <div className="absolute h-[1849px] left-0 top-[2515px] w-full" style={{ backgroundImage: "linear-gradient(180deg, rgb(18, 17, 17) 0%, rgb(18, 17, 17) 46.133%, rgb(200, 236, 209) 52.749%, rgb(255, 255, 255) 69.055%)" }} data-name="P2">
+      <div className="absolute h-[780px] left-1/2 -translate-x-1/2 top-[962px] w-[2361px] max-w-[150%]">
         <div className="absolute inset-[-12.82%_-4.24%]">
           <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 2561 980">
             <g filter="url(#filter0_f_1_1148)" id="Ellipse 89">
@@ -1555,7 +1560,7 @@ function P2() {
       </div>
       <Frame70 />
       <Frame12 />
-      <div className="absolute h-[982px] left-[-220px] top-[1022px] w-[2361px]">
+      <div className="absolute h-[982px] left-1/2 -translate-x-1/2 top-[1022px] w-[2361px] max-w-[150%]">
         <div className="absolute inset-[-10.18%_-4.24%]">
           <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 2561 1182">
             <g filter="url(#filter0_f_1_1391)" id="Ellipse 88">

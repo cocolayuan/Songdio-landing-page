@@ -1,5 +1,74 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { motion, useReducedMotion } from "motion/react";
 import svgPaths from "../../imports/点击设置纯音乐歌词/svg-5xr26uf8g9";
+
+const PROMPT_HINTS = [
+  "A melancholic jazz tune for a rainy night, pop,...",
+  "A hopeful and upbeat electronic pop track...",
+  "A nostalgic rock song with a serene vibe...",
+] as const;
+
+const HINT_HOLD_MS = 5000;
+const HINT_ENTER_MS = 500;
+const INPUT_ROW_H = 74;
+const INPUT_ROW_H_EXPANDED = Math.round(INPUT_ROW_H * 1.5); // 111
+const LINE_H = 20;
+
+/** Empty-state rotating prompt hints — same slide-up feel as section subtitles. */
+function RotatingPromptHint({ active }: { active: boolean }) {
+  const [index, setIndex] = useState(0);
+  const reduceMotion = useReducedMotion();
+  const wasActive = useRef(active);
+
+  useEffect(() => {
+    if (active && !wasActive.current) {
+      setIndex((i) => (i + 1) % PROMPT_HINTS.length);
+    }
+    wasActive.current = active;
+  }, [active]);
+
+  useEffect(() => {
+    if (!active) return;
+    const delay = reduceMotion ? HINT_HOLD_MS : HINT_ENTER_MS + HINT_HOLD_MS;
+    const id = window.setTimeout(() => {
+      setIndex((i) => (i + 1) % PROMPT_HINTS.length);
+    }, delay);
+    return () => window.clearTimeout(id);
+  }, [active, index, reduceMotion]);
+
+  if (!active) return null;
+
+  const text = PROMPT_HINTS[index];
+
+  return (
+    <div
+      className="absolute inset-0 flex items-center overflow-hidden pointer-events-none"
+      aria-hidden
+    >
+      <div className="h-[20px] w-full overflow-hidden">
+        {reduceMotion ? (
+          <span className="block truncate text-[#66666d] text-[16px] leading-none whitespace-nowrap">
+            {text}
+          </span>
+        ) : (
+          <motion.span
+            key={index}
+            initial={{ y: "100%" }}
+            animate={{ y: 0 }}
+            transition={{
+              type: "tween",
+              ease: [0.625, 0.05, 0, 1],
+              duration: HINT_ENTER_MS / 1000,
+            }}
+            className="block truncate text-[#66666d] text-[16px] leading-none whitespace-nowrap"
+          >
+            {text}
+          </motion.span>
+        )}
+      </div>
+    </div>
+  );
+}
 
 const TAGS = [
   "pop",
@@ -53,6 +122,8 @@ function ModeBarsIcon() {
 /** Unified interactive composer for P2 — one coordinate system, no dual-track overlay. */
 export function ComposerPanel() {
   const [prompt, setPrompt] = useState("");
+  const [focused, setFocused] = useState(false);
+  const [expanded, setExpanded] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [instrumental, setInstrumental] = useState(false);
   const [modeOpen, setModeOpen] = useState(false);
@@ -62,10 +133,31 @@ export function ComposerPanel() {
   const [panelKey, setPanelKey] = useState(0);
   const modeRef = useRef<HTMLDivElement>(null);
   const tagsRef = useRef<HTMLDivElement>(null);
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
   const spinTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const canCreate = prompt.trim().length > 0;
   const modeLabel = modeChosen ? `Mode ${selectedVersion}` : "Mode";
+  const showHint = !focused && prompt.length === 0;
+
+  const measureOverflow = useCallback(() => {
+    const el = textareaRef.current;
+    if (!el) return;
+    // Empty (no chars / only spaces without newline) stays single-line height.
+    if (el.value.length === 0) {
+      setExpanded(false);
+      return;
+    }
+    const prev = el.style.height;
+    el.style.height = `${LINE_H}px`;
+    const needsExpand = el.scrollHeight > LINE_H + 1 || el.value.includes("\n");
+    el.style.height = prev;
+    setExpanded(needsExpand);
+  }, []);
+
+  useEffect(() => {
+    measureOverflow();
+  }, [prompt, measureOverflow]);
 
   useEffect(() => {
     if (!modeOpen) return;
@@ -102,15 +194,35 @@ export function ComposerPanel() {
       className="pointer-events-auto w-full max-w-[1069px] mx-auto"
       data-name="composer-panel"
     >
-      {/* Input row */}
-      <div className="relative h-[74px] rounded-[24px] border border-white/8 bg-[#1C1C1F] flex items-center pl-[20px] pr-[12px] gap-[12px]">
-        <input
-          type="text"
-          value={prompt}
-          onChange={(e) => setPrompt(e.target.value)}
-          placeholder="Describe your song..."
-          className="flex-1 min-w-0 bg-transparent outline-none border-0 text-[#eee] placeholder:text-[#66666d] text-[16px] leading-none"
-        />
+      {/* Input row — expands to 1.5× height when content exceeds one line */}
+      <div
+        className={`relative rounded-[24px] border border-white/8 bg-[#1C1C1F] flex pl-[20px] pr-[12px] gap-[12px] transition-[height] duration-300 ease-out ${
+          expanded ? "items-end py-[12px]" : "items-center"
+        }`}
+        style={{ height: expanded ? INPUT_ROW_H_EXPANDED : INPUT_ROW_H }}
+      >
+        <div
+          className={`relative flex-1 min-w-0 h-full flex ${
+            expanded ? "items-stretch" : "items-center"
+          }`}
+        >
+          <RotatingPromptHint active={showHint} />
+          <textarea
+            ref={textareaRef}
+            value={prompt}
+            rows={1}
+            onChange={(e) => setPrompt(e.target.value)}
+            onFocus={() => setFocused(true)}
+            onBlur={() => setFocused(false)}
+            aria-label="Describe your song"
+            placeholder=""
+            className={`composer-prompt-scroll w-full min-w-0 bg-transparent outline-none border-0 resize-none text-[#eee] text-[16px] leading-[20px] ${
+              expanded
+                ? "h-full overflow-y-auto self-stretch py-[4px] pr-[6px]"
+                : "h-[20px] overflow-hidden"
+            }`}
+          />
+        </div>
         <button
           type="button"
           disabled={!canCreate}

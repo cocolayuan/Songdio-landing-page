@@ -5,15 +5,34 @@ import imgRectangle60 from "./997480ac9f15d34c3046b7cc5cf5d4d59dec7b45.png";
 import imgRectangle61 from "./594a98b5b7f4130a8f31a38c127a36e7ef1f7e4e.png";
 import imgRectangle62 from "./4f6a0834bb2598acb162415f5576c4bcdbe80ac3.png";
 import { asset } from "../../lib/asset";
+import { SlideUpText } from "../../components/slide-up-text";
 
 function Frame6() {
   return (
-    <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col font-['Questrial:Regular',sans-serif] items-start leading-[0] left-[calc(50%-13px)] not-italic text-white top-0 whitespace-nowrap">
-      <div className="flex flex-col justify-center relative shrink-0 text-[56px] tracking-[5.6px]">
-        <p className="leading-[60px]">Loved by creators, everywhere.</p>
+    <div className="absolute content-stretch flex flex-col font-['Questrial:Regular',sans-serif] items-start leading-[0] left-[423px] not-italic text-white top-0 w-max max-w-none">
+      <div className="flex flex-col justify-center relative shrink-0 text-[56px] tracking-[5.6px] whitespace-nowrap">
+        <SlideUpText
+          split="characters"
+          from="first"
+          stagger={0.02}
+          inView
+          once
+          className="leading-[60px] !whitespace-nowrap !flex-nowrap"
+        >
+          Loved by creators, everywhere.
+        </SlideUpText>
       </div>
-      <div className="flex flex-col justify-center opacity-70 relative shrink-0 text-[28px] tracking-[2.24px]">
-        <p className="leading-[50px]">{`Thousands of tracks made, worldwide — here's what people are saying`}</p>
+      <div className="flex flex-col justify-center opacity-70 relative shrink-0 text-[28px] tracking-[2.24px] whitespace-nowrap w-max max-w-none">
+        <SlideUpText
+          split="lines"
+          stagger={0.2}
+          delay={0.35}
+          inView
+          once
+          className="leading-[50px] !whitespace-nowrap !flex-nowrap w-max max-w-none"
+        >
+          {`Thousands of tracks made, worldwide — here's what people are saying`}
+        </SlideUpText>
       </div>
     </div>
   );
@@ -105,7 +124,7 @@ function ReviewsCarousel() {
 
   return (
     <>
-      <div ref={scrollerRef} className="absolute h-[249px] left-0 overflow-x-auto overflow-y-clip top-[177px] w-[1145px] scrollbar-hidden">
+      <div ref={scrollerRef} className="absolute h-[249px] left-[423px] overflow-x-auto overflow-y-clip top-[177px] w-[1145px] scrollbar-hidden">
         {REVIEWS.map((review, i) => (
           <ReviewCard key={review.name} review={review} left={i * CARD_STEP} />
         ))}
@@ -113,7 +132,7 @@ function ReviewsCarousel() {
       {/* right-scroll hint button (same style as the footer CTA arrow) */}
       <button
         aria-label="Scroll reviews right"
-        className="absolute bg-white border-none cursor-pointer left-[1085px] p-0 rounded-[57.895px] size-[44px] top-[280px] transition-transform duration-150 hover:scale-110"
+        className="absolute bg-white border-none cursor-pointer left-[1508px] p-0 rounded-[57.895px] size-[44px] top-[280px] transition-transform duration-150 hover:scale-110"
         onClick={scrollRight}
       >
         <Frame8 />
@@ -124,7 +143,7 @@ function ReviewsCarousel() {
 
 function LovedByCreatorsEverywhere() {
   return (
-    <div className="absolute h-[426px] left-[401px] top-[160px] w-[1145px]" data-name="Loved by creators, everywhere.">
+    <div className="absolute h-[426px] left-0 top-[160px] w-full" data-name="Loved by creators, everywhere.">
       <Frame6 />
       <ReviewsCarousel />
     </div>

@@ -27,6 +27,7 @@ import imgFrame58 from "./226049655f3871f3dac264b316138eae1882ff2f.png";
 import imgImage575 from "./fc9ebb09160f6231ecc3418b0eda9f820e97d4b1.png";
 import { imgFrame37 } from "./svg-z4k2a";
 import { asset } from "../../lib/asset";
+import { SlideUpText } from "../../components/slide-up-text";
 
 const FEATURE_CARD_CLASS = "bg-[#202020] content-stretch flex flex-col h-[311px] w-[332px] items-start p-[28px] relative rounded-[24px] shrink-0";
 const FEATURE_COPY_CLASS = "[word-break:break-word] content-stretch flex flex-col font-['Questrial:Regular',sans-serif] gap-[12px] items-start not-italic relative shrink-0 w-full max-w-full text-left";
@@ -35,12 +36,30 @@ const FEATURE_BODY_CLASS = "leading-[19px] relative shrink-0 text-[#9e9d9f] text
 
 function Frame25() {
   return (
-    <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col items-start leading-[0] left-[calc(50%-9px)] text-white top-[109px]">
+    <div className="absolute content-stretch flex flex-col items-start leading-[0] left-[423px] text-white top-[109px]">
       <div className="flex flex-col font-['Questrial:Regular',sans-serif] justify-center not-italic relative shrink-0 text-[56px] tracking-[5.6px] whitespace-nowrap">
-        <p className="leading-[60px]">Inspired by AI. Made by anyone</p>
+        <SlideUpText
+          split="characters"
+          from="first"
+          stagger={0.02}
+          inView
+          once
+          className="leading-[60px] whitespace-nowrap flex-nowrap"
+        >
+          Inspired by AI. Made by anyone
+        </SlideUpText>
       </div>
-      <div className="flex flex-col font-['Questrial:Regular','Noto_Sans_JP:Regular',sans-serif] justify-center min-w-full opacity-70 relative shrink-0 text-[28px] tracking-[2.24px] w-[min-content]" style={{ fontVariationSettings: '"wght" 400' }}>
-        <p className="leading-[50px]">Hum it. Type it. Snap it.Hear it become a song！</p>
+      <div className="flex flex-col font-['Questrial:Regular','Noto_Sans_JP:Regular',sans-serif] justify-center opacity-70 relative shrink-0 text-[28px] tracking-[2.24px] whitespace-nowrap" style={{ fontVariationSettings: '"wght" 400' }}>
+        <SlideUpText
+          split="lines"
+          stagger={0.2}
+          delay={0.35}
+          inView
+          once
+          className="leading-[50px] whitespace-nowrap flex-nowrap"
+        >
+          Hum it. Type it. Snap it.Hear it become a song！
+        </SlideUpText>
       </div>
     </div>
   );
@@ -940,11 +959,15 @@ function P() {
       >Original AI tracks, made to match your vibe.</p>
       <Frame21 />
       {/* Fixed bottom inset on 1920×~1080 P2 frame; fills width up to design max, no dual-track overlay */}
+      {/* Outer layer: centering only (left-1/2 + translateX-50%). Inner layer: equal 15% scale. */}
+      {/* Kept separate so the centering translate and the scale never combine into one transform (which, under the stage's own scale, shifted the module off-center). */}
       <div
         className="-translate-x-1/2 absolute z-20 left-1/2 bottom-[64px] w-[min(1069px,90%)]"
         data-name="composer"
       >
-        <ComposerPanel />
+        <div style={{ transform: "scale(1.15)", transformOrigin: "bottom center" }}>
+          <ComposerPanel />
+        </div>
       </div>
       <Component3D />
     </div>
